@@ -51,7 +51,7 @@ pipeline {
             steps {
                 sh '''
                     cd terraform
-                    terraform init
+                    terraform init -input=false
                     terraform fmt -check
                     terraform validate
                     terraform apply -auto-approve
